@@ -1,0 +1,131 @@
+/* LandingPage.css */
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .header {
+    margin-bottom: 35rem;
+  }
+  
+  .cta-section {
+    margin-bottom: -1rem;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #4285f4;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .features-section {
+    position: absolute;
+    bottom: 10px; 
+    left: 20px; 
+    
+  }
+  
+  .footer {
+    margin-top: 3rem;
+  }
+  
+  .footer a {
+    color: #1b1b1c;
+    text-decoration: none;
+  }
+  
+  .features-section ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+    padding-left: 1rem;
+  }
+  
+  .features-section li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .survey-ace {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .right-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+  }
+  
+  .features {
+    margin-right: 5px;
+  }
+  
+  .sign-in {
+    padding: 5px;
+    background-color: #6896e0;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  .sign-inn {
+    padding: 5px;
+    background-color: #8ca6d0;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 5px;
+  }
+  
+  .sign-in:hover {
+    background-color: #c9e9e4;
+  }
+
+  /* LandingPage.css */
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-image: url('/Users/tehillahaddy/rsuite/src/images/halftone.jpg.webp');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .top-left-section {
+    position: absolute;
+    top: 200px; /* Adjust the value as per your desired distance */
+    left: 60px; /* Adjust the value as per your desired distance */
+    margin: 1rem;
+  }
+  .bold-text {
+    font-weight: bold;
+    font-size: 4rem;
+    color: #FF3366; /* Example color, you can choose your own catchy color */
+    margin-bottom: 0.1rem;
+  }
+  
+  .bold-text1 {
+    color: #FF3366;
+    align-items: left;
+  }
+  
+  .bold-text2 {
+    color: #337eff;
+  }
+  
+  .bold-text3 {
+    color: #0b0a09;
+    align-items: left;
+  }
