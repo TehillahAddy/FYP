@@ -1,131 +1,134 @@
 /* LandingPage.css */
 
 .landing-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-  }
-  
-  .header {
-    margin-bottom: 35rem;
-  }
-  
-  .cta-section {
-    margin-bottom: -1rem;
-  }
-  
-  .cta-button {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: #4285f4;
-    color: white;
-    font-size: 1.2rem;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-  
-  .features-section {
-    position: absolute;
-    bottom: 10px; 
-    left: 20px; 
-    
-  }
-  
-  .footer {
-    margin-top: 3rem;
-  }
-  
-  .footer a {
-    color: #1b1b1c;
-    text-decoration: none;
-  }
-  
-  .features-section ul {
-    list-style-type: disc;
-    margin-left: 2rem;
-    padding-left: 1rem;
-  }
-  
-  .features-section li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .survey-ace {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  .right-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5px;
-  }
-  
-  .features {
-    margin-right: 5px;
-  }
-  
-  .sign-in {
-    padding: 5px;
-    background-color: #6896e0;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-  .sign-inn {
-    padding: 5px;
-    background-color: #8ca6d0;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    margin-right: 5px;
-  }
-  
-  .sign-in:hover {
-    background-color: #c9e9e4;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-image: url('/Users/tehillahaddy/rsuite/src/images/halftone.jpg.webp');
+  background-size: cover;
+  background-position: center;
+}
 
-  /* LandingPage.css */
+.top-left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 110px; /* Adjust the value as per your desired distance */
+  left: 60px; /* Adjust the value as per your desired distance */
+}
 
-.landing-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-    background-image: url('/Users/tehillahaddy/rsuite/src/images/halftone.jpg.webp');
-    background-size: cover;
-    background-position: center;
-  }
+.bold-text {
+  font-weight: bold;
+  font-size: 4rem;
+  color: #FF3366; /* Example color, you can choose your own catchy color */
+  margin-bottom: 0.1rem;
+}
+
+.bold-text1 {
+  color: #FF3366;
+  align-items: left;
+}
+
+.bold-text2 {
+  color: #337eff;
+}
+
+.bold-text3 {
+  color: #0b0a09;
+  align-items: left;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.cta-section {
+  margin-top: 3rem; /* Adjust the value as per your desired distance */
+  margin-bottom: 1rem;
+}
+
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #4285f4;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 4px;
+}
+/* LandingPage.css */
+
+.features-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16rem;
+  color: #2b2828;
+  text-align: center;
+}
+
+.feature {
+  flex: 1 1 200px;
+  margin: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+.feature img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #191717;
+}
+
+.feature p {
+  margin-bottom: 0.5rem;
+}
+
+
+.footer {
+  margin-top: 2rem; /* Adjust the value as per your desired distance */
+  margin-bottom: 0rem;
   
-  .top-left-section {
-    position: absolute;
-    top: 200px; /* Adjust the value as per your desired distance */
-    left: 60px; /* Adjust the value as per your desired distance */
-    margin: 1rem;
-  }
-  .bold-text {
-    font-weight: bold;
-    font-size: 4rem;
-    color: #FF3366; /* Example color, you can choose your own catchy color */
-    margin-bottom: 0.1rem;
-  }
+    margin-top: 2rem; /* Adjust the value as per your desired distance */
+    background-color: rgba(248, 250, 250, 0.256); /* Set the desired background color */
+    color: #333; /* Set the desired text color */
   
-  .bold-text1 {
-    color: #FF3366;
-    align-items: left;
-  }
-  
-  .bold-text2 {
-    color: #337eff;
-  }
-  
-  .bold-text3 {
-    color: #0b0a09;
-    align-items: left;
-  }
+}
+
+
+.footer a {
+  color: #1b1b1c;
+  text-decoration: none;
+}
+
+.sign-in {
+  padding: 5px;
+  background-color: #6896e0;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.sign-inn {
+  padding: 5px;
+  background-color: #c5cedd;
+  color: rgb(14, 13, 13);
+  text-decoration: none;
+  border-radius: 2px;
+  margin-right: 5px;
+}
+
+.sign-in:hover {
+  background-color: #c9e9e4;
+}

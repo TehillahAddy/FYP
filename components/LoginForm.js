@@ -1,8 +1,17 @@
 import React from 'react';
 import './Login.css';
-
+import { useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    // Perform login logic here
+
+    // After successful login, navigate to the homepage
+    navigate('/home');
+  };
+
   return (
     <div>
       <h1 className="logo">SurveyAce</h1>
@@ -22,7 +31,7 @@ const LoginForm = () => {
           <label htmlFor="remember-me">Remember Me</label>
         </div>
 
-        <button type="submit">Login</button>
+        <button type="submit" onClick={handleLogin}>Login</button>
 
         <p className="terms-and-conditions">
           Forgot Password?
@@ -35,9 +44,7 @@ const LoginForm = () => {
       <div className="footer">
         Version 1.1
       </div>
-
     </div>
-
   );
 };
 
