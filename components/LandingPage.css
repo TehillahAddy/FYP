@@ -17,7 +17,7 @@
   flex-direction: column;
   align-items: flex-start;
   position: absolute;
-  top: 110px; /* Adjust the value as per your desired distance */
+  top: 115px; /* Adjust the value as per your desired distance */
   left: 60px; /* Adjust the value as per your desired distance */
 }
 
