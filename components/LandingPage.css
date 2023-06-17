@@ -49,6 +49,8 @@
 .cta-section {
   margin-top: 3rem; /* Adjust the value as per your desired distance */
   margin-bottom: 1rem;
+  position: relative;
+  top: 17rem; /* Adjust the value to move it down further */
 }
 
 

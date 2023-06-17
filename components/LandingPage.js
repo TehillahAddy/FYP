@@ -22,7 +22,7 @@ const LandingPage = () => {
       </div>
       
       <div className="cta-section">
-        <h2>Start Creating Surveys Today.</h2>
+        <h2>Start Creating Surveys Today!!</h2>
         <Link to="/signup" className="sign-in">Sign Up</Link>
       </div>
       
