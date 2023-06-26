@@ -1,23 +1,29 @@
 import React from 'react';
-import './HomePage.css';
+import './NewProjectPage.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShare, faBell, faFolder, faUsers, faBuilding, faMobileAlt, faFile, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import avatar from '/Users/tehillahaddy/rsuite/src/images/avatar-profile-icon_188544-4755.jpg.webp';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-
-const HomePage = () => {
+const NewProjectPage = () => {
     return (
-        <div className="homepage">
+        <div className='newprojectpage'>
+            <div className="body">
+                <div className="title-container">
+                    <input type="text" className="title-input" placeholder=" " />
+                    <label className="title-label">Title:</label>
+                </div>
+                <div className="title-container">
+                    <input type="text" className="title-input" placeholder=" " />
+                    <label className="title-label">Project ID:</label>
+                </div>
+            </div>
             <div className="top-left-corner">
+                <Link to=""> </Link>
                 <h1>SurveyAce</h1>
             </div>
-            <div className="top-corner">
-                <Link to="/home"></Link>
-                <h1>Projects</h1>
-            </div>
-            <div className="topc">
+
+            <div className="top-c">
                 <Link to="/newproject">
                     <h1>New Project</h1>
                 </Link>
@@ -69,15 +75,11 @@ const HomePage = () => {
                     </div>
                 </Link>
                 <Link to="/">
-                <div className="menu-item logout">
-                    <FontAwesomeIcon icon={faSignOutAlt} className="menu-icon logout-icon" />
-                    <span className="menu-text">Logout</span>
-                </div>
+                    <div className="menu-item logout">
+                        <FontAwesomeIcon icon={faSignOutAlt} className="menu-icon logout-icon" />
+                        <span className="menu-text">Logout</span>
+                    </div>
                 </Link>
-            </div>
-            <div className="search-bar">
-                <input type="text" placeholder="Search Projects..." className="search-input" />
-                <FontAwesomeIcon icon={faSearch} className="search-icon" />
             </div>
 
             <div className="horizontal-line"></div>
@@ -86,6 +88,7 @@ const HomePage = () => {
         </div>
 
     );
+
 };
 
-export default HomePage;
+export default NewProjectPage;

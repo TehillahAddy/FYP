@@ -1,9 +1,27 @@
-.homepage {
+  
+  .newprojectpage {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     height: 100vh;
   }
+
+  .body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    margin-bottom: 200px;
+    background-image: url('/Users/tehillahaddy/rsuite/src/images/halftone.jpg.webp');
+    background-size: cover;
+    background-position: center;
+  }
+
   
   .horizontal-line {
     position: absolute;
@@ -34,6 +52,7 @@
     animation: moveRight 5s linear infinite;
   }
 
+
   .top-left-corner {
     position: absolute;
     top: 0;
@@ -57,16 +76,16 @@
     margin-left: 240px;
   }
 
-  .topc {
+  .top-c {
     position: absolute;
     top: 0;
-    left: 0;
-   
+    left: 15px; /* Adjust the left position as needed */
   }
   
-  .topc h1 {
+  
+  .top-c h1 {
     font-size: 18px; /* Adjust the font size as per your preference */
-    margin-left: 340px;
+    margin-left: 215px;
     display: inline-block;
     padding: 0; /* Adjust the padding to remove any extra space */
     border: 1px solid transparent; /* Add a transparent border initially */
@@ -199,31 +218,45 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow */
 }
 
-.search-bar {
-  display: flex;
-  align-items: center;
-  padding: 4.5rem 4rem; /* Adjust the padding as desired */
-  border-radius: 4px;
-  width: 1000px; /* Adjust the width as desired */
-  margin-bottom: 15rem; /* Adjust the margin as desired */
+.username-containr input,
+.password-containr input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: left;
 }
 
-.search-input {
-  border: none;
-  outline: none;
-  background-color: transparent;
-  margin-right: 0.5rem;
-  width: 200px;
-  font-size: 14px;
-}
+.title-container {
+    position: relative;
+    margin-bottom: 20px; /* Adjust the margin as desired */
+  }
+  
+  .title-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  .title-label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  .title-input:focus + .title-label,
+  .title-input:not(:placeholder-shown) + .title-label {
+    top: -20px; /* Adjust the top position as desired */
+    font-size: 14px;
+    font-weight: bold; /* Add the font-weight property */
+    color: #333;
+  }
 
-.search-icon {
-  font-size: 18px;
-  color: #555555;
-}
-
-.menu-item.logout .menu-icon {
-  color: rgb(59, 51, 51); /* Change the color to your desired color */
-}
-
-
+  .title-input:focus {
+    outline: none;
+  }

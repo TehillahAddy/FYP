@@ -5,6 +5,7 @@ import LoginForm from './components/LoginForm';
 import LandingPage from './components/LandingPage';
 import SignUpPage from './components/SignUpPage';
 import HomePage from './components/HomePage';
+import NewProjectPage from './components/NewProjectPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/loginform" element={<LoginForm />} />
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/home" element={<HomePage />} />
+          <Route path="/newproject" element={<NewProjectPage />} />
         </Routes>
       </Router>
     </div>
