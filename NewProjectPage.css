@@ -1,0 +1,323 @@
+  
+  .newprojectpage {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+  }
+
+  .body {
+    position: absolute;
+    top: 33%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    margin-bottom: 200px;
+    background-image: url('/Users/tehillahaddy/rsuite/src/images/halftone.jpg.webp');
+    background-size: cover;
+    background-position: center;
+   
+  }
+
+  
+  .horizontal-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #eae1e1;
+    margin-top: 3rem; /* Adjust the margin as per your desired spacing */
+  }
+  
+  .horizontal-linee {
+    position: absolute;
+    left: 1%;
+    right: 85%;
+    height: 2px;
+    background-color: #eae1e1;
+    margin-top: 19.5rem; /* Adjust the margin as per your desired spacing */
+  }
+  
+  
+  .vertical-line-sideways {
+    height: 950px; /* Adjust the height as per your desired length */
+    width: 2px;
+    background-color: #eae1e1;
+    margin-left: 1px; /* Adjust the margin as per your desired spacing */
+    margin-right: 902px;
+    position: absolute;
+    animation: moveRight 5s linear infinite;
+  }
+
+
+  .top-left-corner {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .top-left-corner h1 {
+    font-size: 24px; /* Adjust the font size as per your preference */
+    margin-left: 19px;
+  }
+  
+  
+  .top-corner {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .top-corner h1 {
+    font-size: 18px; /* Adjust the font size as per your preference */
+    margin-left: 240px;
+    cursor: default;
+  }
+
+  .top-c {
+    position: absolute;
+    top: 0;
+    left: 15px; /* Adjust the left position as needed */
+  }
+  
+  
+  .top-c h1 {
+    font-size: 18px; /* Adjust the font size as per your preference */
+    color: #7482e7;
+    margin-left: 215px;
+    display: inline-block;
+    padding: 0; /* Adjust the padding to remove any extra space */
+    border: 1px solid transparent; /* Add a transparent border initially */
+    transition: border-color 0.2s ease; /* Add a smooth transition effect */
+    cursor: default;
+    
+  }
+  
+  .top-c:hover h1 {
+    border-color: rgb(254, 254, 255); /* Change the border color as desired */
+    border-radius: 44px; /* Add a border radius as desired */
+  }
+  
+  
+  .Share {
+    position: absolute;
+    top: 0;
+    right: 9rem; /* Adjust the value to move the element further to the right */
+  }
+  
+  .Share h1 {
+    font-size: 15px;
+    display: inline-block;
+    margin-left: 0.7rem;
+    margin-right: 0.2rem;
+  }
+  
+  .Share .share-icon {
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.1rem;
+    
+  }
+  
+
+  .Share .notification-icon {
+    font-size: 14px;
+    margin-left: 0.8rem;
+    color: rgb(107, 107, 232);
+  }
+  
+  .user-profile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.8rem;
+  }
+  
+  .profile-picture {
+    width: 40px;
+    height: 38px;
+    border-radius: 50%;
+    margin-right: 0rem;
+    
+  }
+  
+  .username {
+    font-size: 14px;
+  }
+  
+  .personal-section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 1rem;
+  }
+  
+  .personal-section h2 {
+    font-size: 11px;
+    margin-right: 2.2rem;
+    color: #2b1212; 
+  }
+
+  .left-section {
+    margin-top: 5rem; /* Adjust the margin as per your preference */
+    margin-left: 1rem; /* Adjust the margin-left to move it to the right */
+    position: absolute;
+    left: 0;
+  }
+  
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem; /* Adjust the margin as per your preference */
+    cursor: pointer;
+  }
+  
+  .menu-icon {
+    font-size: 18px;
+    margin-right: 1rem; /* Adjust the margin as per your preference */
+    color: #7482e7;
+  }
+  
+  .menu-item span {
+    font-size: 14px;
+
+  }
+  .menu-item .menu-text {
+  font-size: 15px;
+  font-weight: bold; 
+  color: rgb(58, 56, 56); /* Change the color value to your desired color */
+}
+  
+.menu-item:hover {
+  border: 1px solid rgb(156, 156, 203); /* Change the border color and style as desired */
+  border-radius: 4px; /* Adjust the border radius as desired */
+}
+.menu-item {
+  position: relative; /* Add position relative for the pseudo-element */
+}
+
+.menu-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent; /* Set initial border to transparent */
+  border-radius: 4px; /* Adjust the border radius as desired */
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Add transition animation */
+}
+
+.menu-item:hover::after {
+  border-color: rgb(195, 195, 232); /* Change the border color to desired color */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a subtle box shadow */
+}
+
+.username-containr input,
+.password-containr input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.title-container {
+    position: relative;
+    margin-bottom: 20px; /* Adjust the margin as desired */
+  }
+  
+  .title-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  .title-label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  .title-input:focus + .title-label,
+  .title-input:not(:placeholder-shown) + .title-label {
+    top: -20px; /* Adjust the top position as desired */
+    font-size: 14px;
+    font-weight: bold; /* Add the font-weight property */
+    color: #333;
+  }
+
+  .title-input:focus {
+    outline: none;
+  }
+
+  .title-containe {
+    position: relative;
+    margin-bottom: 20px; /* Adjust the margin as desired */
+    height: 100px;
+    border: #2b1212;
+  }
+  
+  .title-inpu {
+    width: 120%;
+    height: 120px; /* Adjust the height as needed */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    line-height: 1; /* Adjust the line-height as needed */
+    text-align: justify;
+  }
+  .title-labe {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  
+  }
+  
+  .title-inpu:focus + .title-labe,
+  .title-inpu:not(:placeholder-shown) + .title-labe {
+    top: -20px; /* Adjust the top position as desired */
+    font-size: 14px;
+    font-weight: bold; /* Add the font-weight property */
+    color: #333;
+  }
+
+  .title-inpu:focus {
+    outline: none;
+  }
+
+  .save-button {
+    display: block;
+    margin-top: 60px;
+    padding: 10px 20px;
+    background-color: #cfbbbb;
+    border: none;
+    border-radius: 4px;
+    color: #999797;
+    font-size: 16px;
+    cursor: pointer;
+    
+  }
+  
+  .save-button:hover {
+    background-color: #eaeaea;
+  }
+  
