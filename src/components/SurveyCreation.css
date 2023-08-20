@@ -1,0 +1,165 @@
+/* SurveyCreation.css */
+
+.survey-creation-page {
+  padding: 20px;
+}
+
+.survey-creation-page h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.survey-creation-page form {
+  margin-bottom: 20px;
+}
+
+.survey-creation-page form > div {
+  margin-bottom: 10px;
+}
+
+.survey-creation-page form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.survey-creation-page form select {
+  width: 200px;
+}
+
+.survey-creation-page form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.survey-creation-page form button:hover {
+  background-color: #0056b3;
+}
+
+.survey-creation-page p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.survey-creation-page ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.survey-creation-page li {
+  margin-bottom: 5px;
+}
+
+/* Additional Styles */
+
+.question-container {
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 30px;
+  margin-bottom: 25px;
+}
+
+.question-container.show {
+  display: block;
+}
+
+
+
+.question-container input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.question-container button {
+  margin-top: 10px;
+}
+
+.question-container button:last-child {
+  margin-top: 0;
+}
+
+.save-button-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Use transform to center the button */
+}
+ 
+.save-button-containerr {
+  position: absolute;
+  bottom: 0.5px;
+  left: 70%;
+  transform: translateX(-50%);
+  padding: 5px 10px; /* Adjust the padding as desired */
+  font-size: 14px; /* Adjust the font size as desired */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.save-button-containerr:hover {
+  background-color: #0056b3;
+}
+
+
+.save-buttonn {
+  position: absolute;
+  bottom: 0.5px;
+  left: 20%;
+  transform: translateX(-50%);
+  padding: 5px 10px; /* Adjust the padding as desired */
+  font-size: 14px; /* Adjust the font size as desired */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: #0056b3;
+}
+
+/* Add the following CSS to make the placeholder text transparent */
+.transparent-placeholder::placeholder {
+  color: transparent;
+}
+
+.transparent-placeholder {
+  /* Set the text color when the input field is not focused */
+  color: #ddd5d5; /* Change this to your desired text color */
+  /* Set the transparent placeholder color */
+ 
+  }
+  /* Set the placeholder color when the input field is focused */
+  :focus::placeholder {
+    color: #d4cece; /* Change this to your desired text color */
+  }
+
+  .option-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .option-container input[type="text"] {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    color: #121213;
+  }
+  
+  .option-container span {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+
