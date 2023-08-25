@@ -9,6 +9,8 @@ import NewProjectPage from './components/NewProjectPage';
 import SurveyCreationPage from './components/SurveyCreationPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SurveyTemplateLibrary from './components/SurveyTemplateLibrary';
+import SurveyTemplateDetails from './components/SurveyTemplateDetails';
+import CreateSurveyOptions from './components/CreateSurveyOptions';
 
 function App() {
   return (
@@ -22,6 +24,9 @@ function App() {
           <Route path="/newproject" element={<NewProjectPage />} />
           <Route path="/survey-creation" element={<SurveyCreationPage />} />
           <Route path="/survey-templates" element={<SurveyTemplateLibrary />} />
+          <Route path="/survey-templates/:templateId" element={<SurveyTemplateDetails />} />
+          <Route path="/create-survey" element={<CreateSurveyOptions />} />
+         
         </Routes>
       </Router>
     </div>

@@ -7,6 +7,9 @@ import avatar from '/Users/tehillahaddy/rsuite/src/images/avatar-profile-icon_18
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 
+
+
+
 const HomePage = () => {
     return (
         <div className="homepage">
@@ -16,7 +19,7 @@ const HomePage = () => {
             <div className="top-corner">
                 <h1>Projects</h1>
             </div>
-          
+
 
             <div className="Share">
                 <h1>Share</h1>
@@ -75,6 +78,11 @@ const HomePage = () => {
                 <input type="text" placeholder="Search Projects..." className="search-input" />
                 <FontAwesomeIcon icon={faSearch} className="search-icon" />
             </div>
+
+            <Link to="/create-survey" className="creat-survey-button">
+                Create Survey
+            </Link>
+
 
             <div className="horizontal-line"></div>
             <div className="horizontal-linee"></div>
