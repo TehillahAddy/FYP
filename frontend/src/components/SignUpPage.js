@@ -134,11 +134,11 @@ const SignupPage = () => {
         </p>
 
         <div className="business-account-container">
-          <input type="checkbox" id="business-account"
+          <input type="checkbox" id="agree-to-terms"
             onChange={(event) => {
               setIsAgreeToTerms(event.target.checked);
             }} />
-          <label htmlFor="business-account">I agree to the terms and conditions?</label>
+          <label htmlFor="agree-to-terms">I agree to the terms and conditions?</label>
         </div>
 
 

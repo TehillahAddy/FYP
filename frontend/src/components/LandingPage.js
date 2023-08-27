@@ -55,7 +55,7 @@ const LandingPage = () => {
       </div>
       
       <div className="footer">
-        <p>Already have an account? <Link to="/loginform" className="sign-inn">Sign In</Link></p>
+        <p>Already have an account? <Link to="/login" className="sign-inn">Sign In</Link></p>
       </div>
     </div>
     
