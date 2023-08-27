@@ -11,6 +11,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SurveyTemplateLibrary from './components/SurveyTemplateLibrary';
 import SurveyTemplateDetails from './components/SurveyTemplateDetails';
 import CreateSurveyOptions from './components/CreateSurveyOptions';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -26,9 +28,10 @@ function App() {
           <Route path="/survey-templates" element={<SurveyTemplateLibrary />} />
           <Route path="/survey-templates/:templateId" element={<SurveyTemplateDetails />} />
           <Route path="/create-survey" element={<CreateSurveyOptions />} />
-         
+
         </Routes>
       </Router>
+      <ToastContainer />
     </div>
   );
 }
