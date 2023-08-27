@@ -17,7 +17,7 @@
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
     margin-bottom: 200px;
-    background-image: url('/Users/tehillahaddy/rsuite/src/images/halftone.jpg.webp');
+    background-image: url('../images/halftone.jpg.webp');
     background-size: cover;
     background-position: center;
    

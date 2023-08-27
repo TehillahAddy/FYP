@@ -7,7 +7,7 @@
   justify-content: center;
   height: 100vh;
   text-align: center;
-  background-image: url('/Users/tehillahaddy/rsuite/src/images/halftone.jpg.webp');
+  background-image: url('../images/halftone.jpg.webp');
   background-size: cover;
   background-position: center;
 }

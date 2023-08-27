@@ -3,12 +3,8 @@ import './HomePage.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShare, faBell, faFolder, faUsers, faBuilding, faMobileAlt, faFile, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
-import avatar from '/Users/tehillahaddy/rsuite/src/images/avatar-profile-icon_188544-4755.jpg.webp';
+import avatar from '../images/avatar-profile-icon_188544-4755.jpg.webp';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-
-
-
-
 
 const HomePage = () => {
     return (

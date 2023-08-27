@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './LandingPage.css';
-import surveyImage from '/Users/tehillahaddy/rsuite/src/images/survey1.jpeg';
-import surveyImage1 from '/Users/tehillahaddy/rsuite/src/images/survey2.jpeg';
-import surveyImage2 from '/Users/tehillahaddy/rsuite/src/images/survey3.jpeg';
-import surveyImage3 from '/Users/tehillahaddy/rsuite/src/images/survey4.webp';
-import surveyImage4 from '/Users/tehillahaddy/rsuite/src/images/survey5.webp'; 
+import surveyImage from '../images/survey1.jpeg';
+import surveyImage1 from '../images/survey2.jpeg';
+import surveyImage2 from '../images/survey3.jpeg';
+import surveyImage3 from '../images/survey4.webp';
+import surveyImage4 from '../images/survey5.webp'; 
 
 const LandingPage = () => {
   return (

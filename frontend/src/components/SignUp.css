@@ -5,7 +5,7 @@
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-  background-image: url('/Users/tehillahaddy/rsuite/src/images/halftone.jpg.webp');
+  background-image: url('../images/halftone.jpg.webp');
   background-size: cover;
   background-position: center;
 }
