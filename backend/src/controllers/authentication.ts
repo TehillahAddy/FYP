@@ -57,17 +57,6 @@ export const register = async (req: express.Request, res: express.Response) => {
       password,
     } = req.body;
 
-    console.debug(req.body);
-    console.log(
-      !username,
-      !email,
-      !phoneNumber,
-      isBusiness === undefined,
-      !firstName,
-      !lastName,
-      !password
-    );
-
     if (
       !username ||
       !email ||

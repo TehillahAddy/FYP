@@ -3,6 +3,7 @@ import {
   createProject as createProjectDB,
   getProjectsByOwnerId,
 } from "../db/projects";
+import { getUserById } from "../db/users";
 
 export const createProject = async (
   req: express.Request,
@@ -12,7 +13,23 @@ export const createProject = async (
     const { ownerID, name, description } = req.body;
 
     if (!ownerID || !name || !description) {
-      return res.sendStatus(400);
+      return res
+        .status(400)
+        .json({
+          message: "Required fields missing",
+        })
+        .end();
+    }
+
+    const user = await getUserById(ownerID);
+
+    if (!user) {
+      return res
+        .status(400)
+        .json({
+          message: "User does not exist",
+        })
+        .end();
     }
 
     const project = await createProjectDB({ ownerID, name, description });
@@ -29,13 +46,9 @@ export const getOwnerProjects = async (
   res: express.Response
 ) => {
   try {
-    const { ownerID } = req.body;
+    const { id } = req.params;
 
-    if (!ownerID) {
-      return res.status(400).json({ message: "Owner ID is required" });
-    }
-
-    const projects = await getProjectsByOwnerId(ownerID);
+    const projects = await getProjectsByOwnerId(id);
 
     return res.status(200).json(projects);
   } catch (error) {
