@@ -45,6 +45,13 @@ const SurveyCreationPage = () => {
         // Add more properties as needed for Likert Scale questions
       };
       addQuestion(question);
+    } else if (value === 'yes-no') {
+      const question = {
+        type: 'yes-no', // Set the question type to 'yes-no'
+        text: 'Yes/No Question', // You can set the default question text
+        options: ['Yes', 'No'], // Set the options for Yes/No
+      };
+      addQuestion(question);
     }
   };
 
@@ -110,11 +117,19 @@ const SurveyCreationPage = () => {
     console.log(questions);
   };
 
+  const handleYesNoOptionChange = (optionIndex, newValue) => {
+    const updatedQuestions = [...questions];
+    updatedQuestions[currentQuestionIndex].options[optionIndex] = newValue;
+    setQuestions(updatedQuestions);
+  };
+
   return (
-    <div>
-      <h1>Create Survey</h1>
+    <div className='SCP'>
+      <div className="top-left-corner">
+        <h1>Create Survey</h1>
+      </div>
       <form>
-        <div>
+        <div className='SQT'>
           <label htmlFor="questionType">Select Question Type:</label>
           <select id="questionType" onChange={handleQuestionTypeChange} value={questionType}>
             <option value="" disabled>Select Question Type</option>
@@ -122,6 +137,7 @@ const SurveyCreationPage = () => {
             <option value="plain-text">Plain Text</option>
             <option value="decimal">Decimal</option>
             <option value="likert-scale">Likert Scale</option>
+            <option value="yes-no">Yes/No</option> {/* Add the Yes/No option */}
           </select>
         </div>
 
@@ -217,11 +233,57 @@ const SurveyCreationPage = () => {
           </div>
         )}
 
+        {questionType === 'yes-no' && (
+          <div className="question-container show">
+            {/* Render Yes/No question */}
+            <input
+              type="text"
+              value={questions[currentQuestionIndex].text}
+              onChange={handleQuestionTextChange}
+              placeholder="Enter your Yes/No question here..."
+              className="question-input"
+            />
+            <div className="yes-no-options">
+              <label>
+                <input
+                  type="radio"
+                  value="Yes"
+                  checked={questions[currentQuestionIndex].options[0] === 'Yes'}
+                  onChange={(e) => handleYesNoOptionChange(e, currentQuestionIndex, 0)}
+                />
+                Yes
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  value="No"
+                  checked={questions[currentQuestionIndex].options[0] === 'No'}
+                  onChange={(e) => handleYesNoOptionChange(e, currentQuestionIndex, 0)}
+                />
+                No
+              </label>
+            </div>
+            {/* Add button to save Yes/No question */}
+            <button type="button" onClick={handleSaveQuestion} className="save-button-containe">
+              Save Question
+            </button>
+          </div>
+        )}
+
+
+
         <button type="button" onClick={handleSaveSurvey} className="save-button-container">
           Save Survey
         </button>
       </form>
+
+      <div className="horizontal-line"></div>
+      <div className="horizontal-linee"></div>
+      <div className="vertical-line-sideways"></div>
+      <div className="vertical-line-sideway"></div>
     </div>
+
+
   );
 };
 
