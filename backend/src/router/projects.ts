@@ -6,5 +6,5 @@ import { isAuthenticated, isOwner } from "../middlewares";
 export default (router: express.Router) => {
   router.post("/create-project", isAuthenticated, createProject);
 
-  router.post("/get-projects", isAuthenticated, getOwnerProjects);
+  router.post("/projects/:id", isAuthenticated, isOwner, getOwnerProjects);
 };
