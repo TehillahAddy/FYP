@@ -5,7 +5,7 @@
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-  background-image: url('../images/halftone.jpg.webp');
+  background-image: url("../images/halftone.jpg.webp");
   background-size: cover;
   background-position: center;
 }
@@ -61,7 +61,7 @@ input[type="password"] {
   gap: 10px;
 }
 
-button[type="submit"] {
+#submitBtn {
   display: block;
   width: 100%;
   padding: 10px;
@@ -73,7 +73,7 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-button[type="submit"]:hover {
+#submitBtn:hover {
   background-color: #0069d9;
 }
 
