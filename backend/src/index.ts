@@ -31,6 +31,7 @@ server.listen(port, () => {
 const MONGO_URL = "mongodb://localhost:27017/surveyace";
 
 mongoose.Promise = Promise;
+mongoose.set("strictQuery", false);
 mongoose.connect(MONGO_URL);
 mongoose.connection.on("error", (error: Error) => console.log(error));
 

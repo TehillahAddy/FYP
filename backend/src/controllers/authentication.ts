@@ -1,34 +1,42 @@
-import express from 'express';
+import express from "express";
 
-import { getUserByEmail, createUser } from '../db/users';
-import { authentication, random } from '../helpers';
+import { getUserByUsername, createUser, getUserByEmail } from "../db/users";
+import { authentication, random } from "../helpers";
 
 export const login = async (req: express.Request, res: express.Response) => {
   try {
-    const { email, password } = req.body;
+    const { username, password } = req.body;
 
-    if (!email || !password) {
-      return res.sendStatus(400);
+    if (!username || !password) {
+      return res.status(400).json({ message: "Missing fields" });
     }
 
-    const user = await getUserByEmail(email).select('+authentication.salt +authentication.password');
+    const user = await getUserByUsername(username).select(
+      "+authentication.salt +authentication.password"
+    );
 
     if (!user) {
-      return res.sendStatus(400);
+      return res.status(400).json({ message: "Login credentials invalid" });
     }
 
     const expectedHash = authentication(user.authentication.salt, password);
-    
+
     if (user.authentication.password != expectedHash) {
       return res.sendStatus(403);
     }
 
     const salt = random();
-    user.authentication.sessionToken = authentication(salt, user._id.toString());
+    user.authentication.sessionToken = authentication(
+      salt,
+      user._id.toString()
+    );
 
     await user.save();
 
-    res.cookie('ANTONIO-AUTH', user.authentication.sessionToken, { domain: 'localhost', path: '/' });
+    res.cookie("ANTONIO-AUTH", user.authentication.sessionToken, {
+      domain: "localhost",
+      path: "/",
+    });
 
     return res.status(200).json(user).end();
   } catch (error) {
@@ -39,22 +47,53 @@ export const login = async (req: express.Request, res: express.Response) => {
 
 export const register = async (req: express.Request, res: express.Response) => {
   try {
-    const { email, password, username } = req.body;
+    const {
+      username,
+      email,
+      phoneNumber,
+      isBusiness,
+      firstName,
+      lastName,
+      password,
+    } = req.body;
 
-    if (!email || !password || !username) {
-      return res.sendStatus(400);
+    console.debug(req.body);
+    console.log(
+      !username,
+      !email,
+      !phoneNumber,
+      isBusiness === undefined,
+      !firstName,
+      !lastName,
+      !password
+    );
+
+    if (
+      !username ||
+      !email ||
+      !phoneNumber ||
+      isBusiness === undefined ||
+      !firstName ||
+      !lastName ||
+      !password
+    ) {
+      return res.status(400).json({ message: "Missing fields" });
     }
 
     const existingUser = await getUserByEmail(email);
-  
+
     if (existingUser) {
-      return res.sendStatus(400);
+      return res.status(400).json({ message: "User already exists" });
     }
 
     const salt = random();
     const user = await createUser({
-      email,
       username,
+      email,
+      phoneNumber,
+      isBusiness,
+      firstName,
+      lastName,
       authentication: {
         salt,
         password: authentication(salt, password),
@@ -66,4 +105,4 @@ export const register = async (req: express.Request, res: express.Response) => {
     console.log(error);
     return res.sendStatus(400);
   }
-}
+};
