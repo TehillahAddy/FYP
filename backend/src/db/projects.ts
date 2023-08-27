@@ -18,9 +18,6 @@ export const ProjectModel = mongoose.model("Project", ProjectSchema);
 export const createProject = (values: Record<string, any>) =>
   new ProjectModel(values).save().then((project) => project.toObject());
 
-// Get Projects
-export const getProjects = () => ProjectModel.find();
-
 // Get Project by ID
 export const getProjectById = (id: string) => ProjectModel.findById(id);
 
