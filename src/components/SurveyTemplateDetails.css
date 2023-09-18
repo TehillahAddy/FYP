@@ -1,0 +1,86 @@
+/* SurveyTemplateDetails.css */
+
+.template-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .template-details {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 70%;
+  }
+  
+  .template-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .template-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .template-details-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .template-details-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .template-details-heading {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .question-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .question-item {
+    border-top: 1px solid #ddd;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .question-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .question-header {
+    font-size: 18px;
+  }
+  
+  .answer {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+  }
+
+  .back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: hsl(211, 80%, 66%);
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    left: 610px; /* Adjust the left position as needed */
+    top: 750px; /* Adjust the top position as needed */
+  }

@@ -1,0 +1,237 @@
+/* SurveyCreation.css */
+
+.SCP {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  
+}
+
+.SQT {
+  margin-right: 10px;
+}
+
+.question-container {
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid #3a3939;
+  padding: 30px;
+  margin-bottom: 25px;
+}
+
+.question-container.show {
+  display: block;
+}
+
+
+
+.question-container input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.question-container button {
+  margin-top: 10px;
+}
+
+.question-container button:last-child {
+  margin-top: 0;
+}
+
+.save-button-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* Use transform to center the button */
+}
+
+.save-button-containerr {
+  position: absolute;
+  bottom: 0.5px;
+  left: 70%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  /* Adjust the padding as desired */
+  font-size: 14px;
+  /* Adjust the font size as desired */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.save-button-containerr:hover {
+  background-color: #0056b3;
+}
+
+
+.save-buttonn {
+  position: absolute;
+  bottom: 0.5px;
+  left: 20%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  /* Adjust the padding as desired */
+  font-size: 14px;
+  /* Adjust the font size as desired */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: #0056b3;
+}
+
+/* Add the following CSS to make the placeholder text transparent */
+.transparent-placeholder::placeholder {
+  color: transparent;
+}
+
+.transparent-placeholder {
+  /* Set the text color when the input field is not focused */
+  color: #726e6e;
+  /* Change this to your desired text color */
+  /* Set the transparent placeholder color */
+
+}
+
+/* Set the placeholder color when the input field is focused */
+:focus::placeholder {
+  color: #d4cece;
+  /* Change this to your desired text color */
+}
+
+.option-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #8a8a8d;
+}
+
+.option-container input[type="text"] {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  color: #8a8a8d;
+}
+
+.option-container span {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.horizontal-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #eae1e1;
+  margin-top: 3rem;
+  /* Adjust the margin as per your desired spacing */
+}
+
+.horizontal-linee {
+  position: absolute;
+  left: 1%;
+  right: 85%;
+  height: 2px;
+  background-color: #eae1e1;
+  margin-top: 19.5rem;
+  /* Adjust the margin as per your desired spacing */
+}
+
+
+.vertical-line-sideways {
+  height: 950px;
+  /* Adjust the height as per your desired length */
+  width: 2px;
+  background-color: #eae1e1;
+  margin-left: 1px;
+  /* Adjust the margin as per your desired spacing */
+  margin-right: 902px;
+  position: absolute;
+  animation: moveRight 5s linear infinite;
+}
+
+.vertical-line-sideway {
+  height: 950px;
+  /* Adjust the height as per your desired length */
+  width: 2px;
+  background-color: #eae1e1;
+  margin-left: 910px;
+  /* Adjust the margin as per your desired spacing */
+  margin-right: 52px;
+  position: absolute;
+  animation: moveRight 5s linear infinite;
+}
+
+/* Styling for the question container */
+.question-container show {
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  width: 80%; /* Adjust the width as needed */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Styling for the question text input */
+.question-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Styling for the Yes/No options */
+.yes-no-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* Styling for the Yes/No option labels */
+.yes-no-options label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* Styling for the radio buttons */
+.yes-no-options input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Styling for the Save Question button */
+.save-button-containe {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.save-button-containe:hover {
+  background-color: #0056b3;
+}
+
+.left-sectionn {
+  margin-top: 2rem; /* Adjust the margin as per your preference */
+  margin-left: 1rem; /* Adjust the margin-left to move it to the right */
+  position: absolute;
+  left: 0;
+}

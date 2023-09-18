@@ -1,0 +1,80 @@
+/* response-analysis.css */
+
+.response-analysis-page {
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Dropdown style */
+  select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  /* Chart container style */
+  canvas {
+    max-width: 600px;
+    margin-top: 20px;
+  }
+  
+  /* Customizing the chart legend */
+  .legend {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+  
+  /* Customizing the chart tooltip */
+  .tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  /* Show the tooltip on hover */
+  .tooltip.active {
+    opacity: 1;
+  }
+  
+  /* Styling the chart axes */
+  .chart-axis-label {
+    font-size: 14px;
+  }
+  
+  .chart-axis-line {
+    stroke: #ccc;
+  }
+  
+  .chart-grid-line {
+    stroke: #f0f0f0;
+  }
+  
